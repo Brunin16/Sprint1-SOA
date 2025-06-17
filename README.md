@@ -1,4 +1,4 @@
-GS-SOA 2025 - FIAP  
+# 💡 GS-SOA 2025 - FIAP  
 ### Disciplina: **Sistemas Orientados a Objetos e Serviços (SOA)**  
 **Aplicação Spring Boot - Assessor Virtual de Investimentos XP**
 
@@ -15,12 +15,11 @@ O sistema permite o cadastro de perfis de clientes, informações detalhadas sob
 ## 🛠️ Tecnologias Utilizadas
 
 - Java 21
-- Spring Boot 3.5
+- Spring Boot 3.5.x
 - Spring Data JPA
-- PostgreSQL
+- Oracle Database
 - Lombok
 - Swagger (springdoc-openapi)
-- Docker
 - Maven
 
 ---
@@ -28,6 +27,7 @@ O sistema permite o cadastro de perfis de clientes, informações detalhadas sob
 ## 🔗 Relacionamentos
 
 - **Client** 1:N **PortfolioRecommendation**
+- Opcionalmente: Pode-se futuramente criar um relacionamento ManyToMany entre **PortfolioRecommendation** e **Asset**, caso queira detalhar os ativos de cada carteira.
 
 ---
 
@@ -56,10 +56,26 @@ O sistema permite o cadastro de perfis de clientes, informações detalhadas sob
 
 ---
 
-## 🐳 Docker e Docker Compose
+## 🧪 Swagger
 
-O projeto já contém um **Dockerfile** e um **docker-compose.yml** para facilitar a execução local junto com um banco PostgreSQL.
+Após subir a aplicação, acesse a documentação da API em:
 
-### 📦 Build da Imagem
+📎 [`http://localhost:8080/swagger-ui/index.html`](http://localhost:8080/swagger-ui/index.html)
+
+---
+
+## 🧑‍💻 Como Executar Localmente
+
+1. Clone o repositório:
 ```bash
-docker-compose build
+git clone https://github.com/seu-usuario/gs-soa-xp2025.git
+cd gs-soa-xp2025
+```
+
+2. Configure as credenciais de conexão ao banco Oracle no `application.properties`.
+
+3. Compile e execute o projeto:
+
+```bash
+./mvnw spring-boot:run
+```
