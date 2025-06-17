@@ -27,7 +27,6 @@ O sistema permite o cadastro de perfis de clientes, informações detalhadas sob
 ## 🔗 Relacionamentos
 
 - **Client** 1:N **PortfolioRecommendation**
-- Opcionalmente: Pode-se futuramente criar um relacionamento ManyToMany entre **PortfolioRecommendation** e **Asset**, caso queira detalhar os ativos de cada carteira.
 
 ---
 
@@ -72,9 +71,7 @@ git clone https://github.com/seu-usuario/gs-soa-xp2025.git
 cd gs-soa-xp2025
 ```
 
-2. Configure as credenciais de conexão ao banco Oracle no `application.properties`.
-
-3. Compile e execute o projeto:
+2. Compile e execute o projeto:
 
 ```bash
 ./mvnw spring-boot:run
