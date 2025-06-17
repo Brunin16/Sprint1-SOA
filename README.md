@@ -15,7 +15,7 @@ O sistema permite o cadastro de perfis de clientes, informações detalhadas sob
 ## 🛠️ Tecnologias Utilizadas
 
 - Java 21
-- Spring Boot 3.5.x
+- Spring Boot 3.5
 - Spring Data JPA
 - Oracle Database
 - Lombok
